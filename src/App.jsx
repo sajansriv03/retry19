@@ -448,7 +448,7 @@ export default function Game() {
         <div style={{position:'fixed',top:0,left:0,right:0,bottom:0,background:'rgba(0,0,0,0.85)',display:'flex',alignItems:'center',justifyContent:'center',zIndex:1000}}>
           <div style={{background:'white',padding:'40px',borderRadius:'15px',textAlign:'center',maxWidth:'400px'}}>
             <h1 style={{margin:'0 0 20px 0',color:'#FFD700'}}>Game Over!</h1>
-            <h2 style={{margin:'0 0 30px 0'}}{winner} Wins!</h2>
+            <h2 style={{margin:'0 0 30px 0'}}>{winner} Wins!</h2>
             <div style={{marginBottom:'30px'}}>
               {Object.entries(scores).map(([player, score]) => (
                 <div key={player} style={{fontSize:'18px',margin:'10px 0',fontWeight: player === winner ? 'bold' : 'normal'}}>
@@ -459,7 +459,7 @@ export default function Game() {
             <button onClick={() => window.location.reload()} style={{padding:'15px 30px',fontSize:'18px',background:'#FFD700',border:'none',borderRadius:'8px',cursor:'pointer',fontWeight:'bold'}}>Play Again</button>
           </div>
         </div>
-      ))}
+      )}
     </div>
   );
 }
